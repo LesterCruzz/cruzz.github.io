@@ -1,0 +1,115 @@
+@use "./colors" as *;
+
+$colors: (
+    'primary': $clr--primary,
+    'light': $clr--light,
+    'dark': $clr--dark,
+    'dark--gray': $clr--dark--gray,
+);
+
+@each $key, $val in $colors {
+    .text {
+        &--#{$key} {
+            color: $val;
+        }
+    }
+    .bg {
+        &--#{$key} {
+            background-color: $val;
+        }
+    }
+}
+
+$alignments: start, end, center, justify, left, right;
+
+@each $alignment in $alignments {
+    .t--aign {
+        &--#{$alignment} {
+            text-align: $alignment;
+        }
+    }
+}
+
+$displays: flex, block, inline-block, grid, none;
+
+@each $d in $displays {
+	.d {
+		&--#{$d} {
+			display: $d;
+		}
+	}
+}
+
+$positions: absolute, relative, sticky, fixed;
+
+@each $p in $positions {
+    .p {
+        &--#{$p} {
+            position: $p;
+        }
+    }
+}
+
+@for $i from 0 through 150 {
+
+	// height
+	.h--#{$i}{
+		height: $i + rem;
+	}
+	// max height
+	.mh--#{$i} {
+		max-height: $i + rem;
+	}
+	// top
+	.t--#{$i} {
+		top: $i + rem;
+	}
+	// width
+	.w--#{$i} {
+		width: $i + rem;
+	}
+	// border radius
+	.br--#{$i} {
+		border-radius: $i + rem;
+	}
+	// max width
+	.mw--#{$i} {
+		max-width: $i + rem;
+	}
+	// margin bottom
+	.mb--#{$i} {
+		margin-bottom: $i + rem;
+	}
+	// margin top
+	.mt--#{$i} {
+		margin-top: $i + rem;
+	}
+	// margin right
+	.mr--#{$i} {
+		margin-right: $i + rem;
+	}
+	// margin left
+	.ml--#{$i} {
+		margin-left: $i + rem;
+	}
+	// padding top, right, bottom, left
+	.p--#{$i} {
+		padding: $i + rem;
+	}
+	// padding left and right
+	.px--#{$i} {
+		padding: 0 $i + rem;
+	}
+	// padding top and bottom
+	.py--#{$i} {
+		padding: $i + rem 0;
+	}
+	// padding top
+	.pt--#{$i} {
+		padding-top: $i + rem;
+	}
+	// padding bottom
+	.pb--#{$i} {
+		padding-bottom: $i + rem;
+	}
+}

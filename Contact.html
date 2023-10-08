@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruzz.</title>
+    <link rel="shortcut icon" type="x-icon" href="./Images/v2/Logo2.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Background Gradient -->
+
+    
+    <!-- Header -->
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="branding">
+                    <img src="./Images/v2/Logo2.png" alt="">
+                    <h3>Cruzz.</h3>
+                </div>
+                <div class="toggle__menu">
+                    <a href="javascript:void(0)"><img src="./Images/Burger ButtonBuger.png" alt=""></a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="header__nav">
+            <div class="header__toggle">
+                <div class="t__brand">
+                <img src="./Images/v2/Logo3.png" alt="">
+                <h3><span>C</span>ruzz<span>.</span></h3>
+            </div>
+            <div class="Ex">
+            <img src="./Images/v2/Ex2.png"  alt="">
+        </div>
+            </div>
+            <ul>
+                <li><a href="./Home.html">Home</a></li>
+                <li><a href="./Services.html">Services</a></li>
+                <li><a href="./Portfolio.html">Portfolio</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+            <div class="highlight">
+                <span class="h__home"></span>
+                <span class="h__services"></span>
+                <span class="h__portfolio"></span>
+                <span class="h__contact"></span>
+            </div>
+            <a href="./CV/Cruz_Resume .pdf" class="nav__button btn bg--dark--blue">Hire Me</a>
+        </div>
+    </header>
+
+    <!-- Contact Banner -->
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact.</h2>
+            <div class="contact__wrapper">
+                
+
+                <div class="contact__left">
+                <div class="contact__container">
+                    <div class="contact__icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact__text">
+                        <h4>Contact Me</h4>
+                        <p>cpe.cruz.marklester@gmail.com<br>+63 948 380 0357</p>
+                    </div>
+                </div>
+                <div class="contact__container">
+                    <div class="contact__icon">
+                        <i class="fa-solid fa-map-pin"></i>
+                    </div>
+                    <div class="contact__text">
+                        <h4>Address</h4>
+                        <p>San Gabriel San Pablo City<br>Laguna 4000</p>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-square-behance"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+
+                <div class="contact__box">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email Address">
+                    <textarea name="" id="" cols="20" rows="10" placeholder="Message"></textarea>
+                    <a href="" class="btn bg--dark--blue">Submit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+<footer class="footer bg--dark--gray">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__branding">
+                <a href="./Home.html">
+                    <img src="./Images/v2/Logo2.png" alt="">
+                    <h3><span>C</span>ruzz<span>.</span></h3>
+                </a>
+            </div>
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-square-behance"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+            <p>©Cruzz. 2023</p>
+        </div>
+    </div>
+</footer>
+
+<section class="bot">
+    <h1>bot</h1>
+</section>
+
+<script>
+
+    const starNav = document.querySelectorAll(".coffee_price");
+    const starContent = document.querySelectorAll(".coffee__content");
+    starNav.forEach((star) => {
+      star.addEventListener("click", () => {
+        removeActiveStar();
+        star.classList.add("active");
+        const activeContent = document.querySelector(`#${star.id}-content`);
+        removeActiveContent();
+        activeContent.classList.add("active");
+      });
+    });
+    
+    function removeActiveStar() {
+      starNav.forEach((star) => {
+        star.classList.remove("active");
+      });
+    }
+    
+    function removeActiveContent() {
+      starContent.forEach((star) => {
+        star.classList.remove("active");
+      });
+    }
+    
+    const headerNav = document.querySelector(".header__nav");
+    const toggleBtn = document.querySelector(".toggle__menu");
+    
+    const closeBtn = document.querySelector(".header__toggle .Ex img");
+    
+    const servicesImg = document.querySelector(".services__image");
+    const services_img = document.querySelector(".services__image2");
+    const services__img = document.querySelector(".services__image3");
+    const servD = document.querySelector(".serv__d");
+    const box = document.querySelector(".box");
+    
+    const serv_D = document.querySelector(".serv__d2");
+    const bo_x = document.querySelector(".box2");
+    
+    const serv__D = document.querySelector(".serv__d3");
+    const bo__x = document.querySelector(".box3");
+    
+    const header = document.querySelector(".header");
+    
+    window.addEventListener("scroll", () => {
+        console.log(window.scrollY);
+        if (window.scrollY >= 150) {
+          header.classList.add("light");
+        } else {
+          header.classList.remove("light");
+        }
+    });
+    
+    toggleBtn.addEventListener("click", () =>{
+        headerNav.classList.toggle("open");
+        toggleBtn.classList.toggle("open"); 
+    });
+    closeBtn.addEventListener("click", () =>{
+    closeBtn.classList.remove("open");
+    headerNav.classList.remove("open");
+    });
+    services_img.addEventListener("mouseover", () =>{
+        services_img.classList.toggle("open");
+        serv_D.classList.toggle("open");
+    });
+    services__img.addEventListener("mouseover", () =>{
+        services__img.classList.toggle("open");
+        serv__D.classList.toggle("open");
+    });
+    bo_x.addEventListener("mouseleave", () =>{
+        services_img.classList.remove("open");
+         serv_D.classList.remove("open");
+     });
+    bo__x.addEventListener("mouseleave", () =>{
+        services__img.classList.remove("open");
+         serv__D.classList.remove("open");
+     });
+    
+    servicesImg.addEventListener("mouseover", () =>{
+        servicesImg.classList.toggle("open");
+        servD.classList.toggle("open");
+    });
+    box.addEventListener("mouseleave", () =>{
+        servicesImg.classList.remove("open");
+         servD.classList.remove("open");
+     });
+    
+    </script>
+    </body>
+    </html>

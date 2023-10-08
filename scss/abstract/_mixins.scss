@@ -1,0 +1,43 @@
+@use "./colors" as *;
+
+mixin centerAll {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin grid($cols, $gap) {
+	display: grid;
+	grid-template-columns: repeat($cols, 1fr);
+	grid-gap: $gap;
+}
+
+@mixin mediaQuery($width) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
+
+@mixin mediaQuery2($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin between {
+	display: flex;
+	justify-content: space-between;
+}
+@mixin before {
+	h2 {
+		position: relative;
+		&::before {
+			content: ' ';
+			height: 0.2rem;
+			width: 11rem;
+			background-color: $clr--primary;
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}

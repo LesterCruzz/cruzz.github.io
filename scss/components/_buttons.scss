@@ -1,0 +1,102 @@
+@use '../abstract/' as *;
+
+.btn {
+	background-color: transparent;
+	padding: 1.2rem 4.7rem;
+	border-top-right-radius: 1.5rem;
+	display: inline-block;
+    border: 1px solid transparent;
+    
+&.bg--primary {
+        border: 1.5px solid $clr--primary;
+        color: $clr--primary;
+		&:hover {
+			background-color: $clr--primary;
+		}
+	}
+
+&.bg--dark--blue {
+	border: 1.5px solid $c--dark--blue;
+        color: $c--dark--blue;
+		&:hover {
+			
+			background-color: $c--dark--blue;
+			color: $clr--light;
+		}
+}
+
+&.bg--light {
+	border: 1.5px solid $clr--light;
+	color: $clr--light;
+	transition: .5s ease;
+	&:hover {
+		background-color: $clr--light;
+		color: $c--dark--blue;
+	}
+}
+&.bg--primary2 {
+	border: 1.5px solid $c--light--blue;
+	color: $clr--light;
+	&:hover {
+		background-color: $c--light--blue;
+		color: $c--dark--blue;
+		border: none;
+		transition: .5s ease;
+	}
+}
+&.bg--solid--primary {
+	background-color: $clr--primary;
+	color: $clr--light;
+	transition: .5s ease;
+	&:hover {
+		background-color: transparent;
+		border: 1.5px solid $clr--light;
+		color: $clr--light;
+	}
+}
+
+}
+
+.btn2 {
+	color: $clr--dark;
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	transition: .5s ease;
+
+	&.bg-light:hover {
+		color: $clr--light;
+		border-bottom: 1.5px solid $clr--light;
+		width: fit-content;
+		transition: .5s ease;
+	}
+}
+
+.btn3 {
+	color: $c--light--blue;
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	transition: .5s ease;
+
+	&.bg__light:hover {
+		color: $clr--light;
+		border-bottom: 1.5px solid $clr--light;
+		width: 13rem;
+	}
+}
+
+.btn4 {
+	color: $clr--light;
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	transition: .5s ease;
+
+	&.bg-light:hover {
+		color: $c--light--blue;
+		border-bottom: 1.5px solid $c--light--blue;
+		width: fit-content;
+		transition: .5s ease;
+	}
+}
